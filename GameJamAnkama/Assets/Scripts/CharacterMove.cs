@@ -11,7 +11,8 @@ public class CharacterMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _basket = Instantiate(basketPrefab, gameObject.transform).GetComponent<BasketStack>(); ;
+        _basket = Instantiate(basketPrefab, gameObject.transform).GetComponent<BasketStack>();
+        _basket.gameObject.transform.Translate(new Vector3(0, 5.6f, 0));
     }
 
     // Update is called once per frame
@@ -24,6 +25,10 @@ public class CharacterMove : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<StockSave>() != null)
             _basket.OnStockCollision(collision.gameObject.GetComponent<StockSave>());
+        if (collision.gameObject.name.Contains("Apple"))
+            _basket.OnAppleCollision(collision.gameObject);
+        if (collision.gameObject.name.Contains("Tree"))
+            collision.gameObject.GetComponent<TreeApplesGrow>().DropApple();
     }
 
     public void OnCollisionExit(Collision collision)

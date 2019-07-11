@@ -53,6 +53,16 @@ public class BasketStack : MonoBehaviour
         _stockingApples = false;
     }
 
+    public void OnAppleCollision(GameObject apple)
+    {
+        apple.transform.position = gameObject.transform.position;
+        apple.transform.parent = gameObject.transform;
+        apple.transform.Translate(new Vector3(0, 1f+0.5f*_apples.Count, 0));
+        apple.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        apple.GetComponent<Rigidbody>().isKinematic = true;
+        AddApple(apple);
+    }
+
     public void SaveApple(StockSave stock)
     {
         GameObject savedApple = _apples.Pop();
@@ -61,7 +71,10 @@ public class BasketStack : MonoBehaviour
             StopCoroutine("SaveApples");
             _stockingApples = false;
         }
-        savedApple.transform.position = Vector3.MoveTowards(savedApple.transform.position, stock.transform.position, 0.02f);
+        savedApple.transform.position = stock.transform.position;
+        savedApple.transform.parent = stock.transform;
+        savedApple.transform.Translate(new Vector3(0, 2.45f+stock.apples.Count*0.8f, 0));
+        stock.AddApple(savedApple);
     }
 
     private IEnumerator SaveApples(StockSave stock)

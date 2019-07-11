@@ -27,16 +27,20 @@ public class TreeApplesGrow : MonoBehaviour
         
     }
 
-    private void DropApple()
+    public void DropApple()
     {
         GameObject droppedApple = _apples.Dequeue();
+        droppedApple.GetComponent<Rigidbody>().useGravity = true;
         if (!_coroutineRunning)
             StartCoroutine("GrowApples");
     }
 
     private void GrowApple()
     {
-        GameObject apple = Instantiate(applePrefab, gameObject.transform);
+        GameObject apple = Instantiate(applePrefab, gameObject.transform, false);
+        apple.transform.Translate(new Vector3(0, 4, 0));
+        apple.transform.parent = gameObject.transform;
+        apple.GetComponent<Rigidbody>().useGravity = false;
         _apples.Enqueue(apple);
         if (_apples.Count >= maxApples)
         {
