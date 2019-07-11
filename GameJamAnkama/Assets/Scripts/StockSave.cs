@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StockSave : MonoBehaviour
 {
-    private List<GameObject> _apples;
+    private int _applesCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        _apples = new List<GameObject>();
+        _applesCount = 0;
     }
 
     // Update is called once per frame
@@ -20,6 +20,6 @@ public class StockSave : MonoBehaviour
 
     public void AddApple(GameObject apple)
     {
-        _apples.Add(apple);
+        _applesCount += 1;
     }
 }
