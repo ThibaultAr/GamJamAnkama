@@ -7,6 +7,7 @@ public class TreeApplesGrow : MonoBehaviour
     public int maxApples;
     public float averagePop;
     public float popVariance;
+    public GameObject applePrefab;
 
 
     private Queue<GameObject> _apples;
@@ -35,8 +36,7 @@ public class TreeApplesGrow : MonoBehaviour
 
     private void GrowApple()
     {
-        //change when apples exist
-        GameObject apple = new GameObject();
+        GameObject apple = Instantiate(applePrefab, gameObject.transform);
         _apples.Enqueue(apple);
         if (_apples.Count >= maxApples)
         {

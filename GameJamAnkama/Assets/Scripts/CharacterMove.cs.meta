@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: b1e17f7461a474d4cb1308ed5ad935f4
+guid: e80996bbb5d6a6147a789a8638e114e6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - applePrefab: {fileID: 5231538785275095025, guid: ad6be08375b8372499cb2493c3a69b02,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
