@@ -17,7 +17,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: 
   SourceProjectPathUnformatted: 
-  SourceBankPathUnformatted: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\Build\\Desktop"
+  SourceBankPathUnformatted: BuildFmod\Desktop
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
