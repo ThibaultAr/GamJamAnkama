@@ -28,7 +28,7 @@ public class CharacterMove : MonoBehaviour
         if (collision.gameObject.name.Contains("Apple"))
             _basket.OnAppleCollision(collision.gameObject);
         if (collision.gameObject.name.Contains("Tree"))
-            collision.gameObject.GetComponent<TreeApplesGrow>().DropApple();
+            collision.gameObject.GetComponent<TreeApplesGrow>().DropApples();
     }
 
     public void OnCollisionExit(Collision collision)
