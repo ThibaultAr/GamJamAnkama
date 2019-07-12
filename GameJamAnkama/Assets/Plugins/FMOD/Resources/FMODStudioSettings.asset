@@ -15,9 +15,9 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 0
   HasPlatforms: 0
-  sourceProjectPath: 
-  SourceProjectPathUnformatted: 
-  SourceBankPathUnformatted: BuildFmod\Desktop
+  sourceProjectPath: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\TeamAuTh\xE9.fspro"
+  SourceProjectPathUnformatted: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\TeamAuTh\xE9.fspro"
+  SourceBankPathUnformatted: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\BuildFmod\Desktop
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -58,7 +58,9 @@ MonoBehaviour:
     Value: 0
   - Platform: 20
     Value: 0
-  BankDirectorySettings: []
+  BankDirectorySettings:
+  - Platform: 2
+    Value: Desktop
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -76,6 +78,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
+  - Desktop\Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

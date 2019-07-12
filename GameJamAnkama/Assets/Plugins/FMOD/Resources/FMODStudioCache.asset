@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8460086141157444478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\BuildFmod\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636985444956470005
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1290
+  Exists: 1
+--- !u!114 &-8143131456000382644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Stun
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Stun
+  guid: ee5b104e293ee64587297ef69ea5c6b3
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2600
+--- !u!114 &-7866324505656970421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_HitTree
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_HitTree
+  guid: 6c992799f062d04da489edeb16b4a533
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1590
 --- !u!114 &-7253201733098231521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,6 +87,26 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 730
+  Exists: 0
+--- !u!114 &-6315783785346805130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Master.bank
+  SubDir: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop
+  lastModified: 636984489666840615
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2828928
   Exists: 0
 --- !u!114 &-6304427889350078727
 MonoBehaviour:
@@ -60,6 +148,26 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 1
+--- !u!114 &-5972143705343857547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\BuildFmod\Desktop\Master.bank
+  SubDir: 
+  lastModified: 636985444956410027
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1918848
+  Exists: 1
 --- !u!114 &-5806890167936019723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,8 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test
   guid: a488cc30bb81ed45855422c7cc376b7a
-  Banks:
-  - {fileID: -768535722954268463}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -103,6 +210,26 @@ MonoBehaviour:
   - Name: 
     Value: 730
   Exists: 1
+--- !u!114 &-5445658526729837534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Desktop\Master.bank
+  SubDir: Desktop
+  lastModified: 636985447905781937
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1918848
+  Exists: 0
 --- !u!114 &-5405765679787738754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +290,74 @@ MonoBehaviour:
   - Name: 
     Value: 730
   Exists: 1
+--- !u!114 &-5022863004701777712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\Build\\Desktop\\Master.strings.bank"
+  SubDir: 
+  lastModified: 636984487943877504
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 730
+  Exists: 0
+--- !u!114 &-5008684732022456666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PommePop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PommePop
+  guid: c5f946e4a65a364ca5a26a8b220fe78e
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 365
+--- !u!114 &-4912663532205886798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_WinPoint
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_WinPoint
+  guid: 1cf2c43665a1a0438bddf5e4c391beb5
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1405
 --- !u!114 &-4786894047488403694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +378,122 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 0
+--- !u!114 &-4209496854676123514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MouseCLick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MouseCLick
+  guid: 57d137eca5b66c4e82f4c131953fcd4a
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1258
+--- !u!114 &-4175724926418283200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636985447905851904
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1290
+  Exists: 0
+--- !u!114 &-3908857074556149988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Dash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Dash
+  guid: 7b69dc6edf89f443babd730c40be3926
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1311
+--- !u!114 &-3856819967255003912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_BiteApple
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_BiteApple
+  guid: 41be1c68ec563445a9b2a6b5cd6c8fbb
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1832
+--- !u!114 &-3795886723019276655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Grab
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Grab
+  guid: b78047963fb7ad43bb445961fdf3ff8e
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1258
 --- !u!114 &-3541587662181943470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +513,91 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 730
+  Exists: 0
+--- !u!114 &-3504805979747982081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636984489666910580
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 730
+  Exists: 0
+--- !u!114 &-2718336894090529511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\BuildFmod\Desktop\Desktop\Master.bank
+  SubDir: Desktop
+  lastModified: 636985448938808959
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1918848
   Exists: 1
+--- !u!114 &-1756253219398409018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\Build\\Desktop\\Master.bank"
+  SubDir: 
+  lastModified: 636984487943807531
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2828928
+  Exists: 0
+--- !u!114 &-1215372522888261182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_ThrowApple
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_ThrowApple
+  guid: 2075c86b9dae0c4983f07bc66e594439
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1489
 --- !u!114 &-768535722954268463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +617,51 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 2828928
-  Exists: 1
+  Exists: 0
+--- !u!114 &-188031980053489742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Master.bank
+  SubDir: 
+  lastModified: 636984489666840615
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2828928
+  Exists: 0
+--- !u!114 &-110464320091743052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Step
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Step
+  guid: 9429e45129bc6e4c959bd183bd069a6a
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1400
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,16 +675,33 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3541587662181943470}
-  - {fileID: -768535722954268463}
+  - {fileID: -8460086141157444478}
+  - {fileID: -5972143705343857547}
+  - {fileID: 1008817162844947491}
+  - {fileID: -2718336894090529511}
   EditorEvents:
-  - {fileID: -5806890167936019723}
+  - {fileID: 5136892371422974645}
+  - {fileID: -4912663532205886798}
+  - {fileID: -1215372522888261182}
+  - {fileID: -3856819967255003912}
+  - {fileID: 3746193916103435450}
+  - {fileID: -4209496854676123514}
+  - {fileID: -7866324505656970421}
+  - {fileID: -3908857074556149988}
+  - {fileID: 7174715878946324388}
+  - {fileID: 615066918156787770}
+  - {fileID: -110464320091743052}
+  - {fileID: -3795886723019276655}
+  - {fileID: -5008684732022456666}
+  - {fileID: -8143131456000382644}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -768535722954268463}
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
   StringsBanks:
-  - {fileID: -3541587662181943470}
-  stringsBankWriteTime: 636984510791011694
+  - {fileID: -8460086141157444478}
+  - {fileID: 1008817162844947491}
+  stringsBankWriteTime: 636985448938938903
   cacheVersion: 3
 --- !u!114 &536359243056330380
 MonoBehaviour:
@@ -287,6 +743,50 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 0
+--- !u!114 &615066918156787770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_HitPlayer
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_HitPlayer
+  guid: 7f5f826cf06e3d4ab5f9dd5189dc12fa
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1886
+--- !u!114 &1008817162844947491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\BuildFmod\Desktop\Desktop\Master.strings.bank
+  SubDir: Desktop
+  lastModified: 636985448938938903
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1290
+  Exists: 1
 --- !u!114 &3370387367548476129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +807,30 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 1
+--- !u!114 &3746193916103435450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MouseOver
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MouseOver
+  guid: 5636f09fe9e2594da9c9de32f996a008
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1084
 --- !u!114 &3792537015069816578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +871,30 @@ MonoBehaviour:
   - Name: 
     Value: 730
   Exists: 0
+--- !u!114 &5136892371422974645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_Gameplay
+  m_EditorClassIdentifier: 
+  Path: event:/Music_Gameplay
+  guid: 15589cc7b7fde6458a9cc3f1dac92b9c
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 42857
 --- !u!114 &5362622640757301342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,3 +915,69 @@ MonoBehaviour:
   - Name: 
     Value: 2828928
   Exists: 1
+--- !u!114 &6789065612763561167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  guid: a488cc30bb81ed45855422c7cc376b7a
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 216461
+--- !u!114 &7174715878946324388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance
+  guid: 7e97a40575d7eb4e887716b7cc77703c
+  Banks:
+  - {fileID: -5972143705343857547}
+  - {fileID: -2718336894090529511}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 86000
+--- !u!114 &8294249329867175658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\lclavel\Documents\UnityProjects\GamJamAnkama\GameJamAnkama\BuildFmod\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636984489666910580
+  LoadResult: 70
+  FileSizes:
+  - Name: 
+    Value: 730
+  Exists: 0
