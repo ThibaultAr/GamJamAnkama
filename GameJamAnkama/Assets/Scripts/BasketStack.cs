@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BasketStack : MonoBehaviour
 {
+    [SerializeField] float _dropForce = 10f;
+
     public int maxAppleLost;
     public float stockDelay;
+    public List<GameObject> _appleAnchors = new List<GameObject>();
+    public int maxAppleCount = 8;
+    public bool isFull = false;
 
     private Stack<GameObject> _apples;
+    
     private bool _stockingApples;
 
     // Start is called before the first frame update
@@ -26,18 +32,39 @@ public class BasketStack : MonoBehaviour
     public void AddApple(GameObject apple)
     {
         _apples.Push(apple);
+        if (_apples.Count >= maxAppleCount)
+            isFull = true;
+        
+        apple.transform.position = _appleAnchors[_apples.Count - 1].transform.position;
+        apple.transform.parent = _appleAnchors[_apples.Count - 1].transform;
     }
 
-    private void DropApple()
+    private void DropApple(Vector3 direction)
     {
         GameObject droppedApple = _apples.Pop();
+        isFull = false;
+        droppedApple.GetComponent<Collider>().isTrigger = true;
+        droppedApple.GetComponent<Rigidbody>().isKinematic = false;
+        droppedApple.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePosition;
+        droppedApple.transform.parent = null;
+        droppedApple.GetComponent<Rigidbody>().AddForce(direction * _dropForce, ForceMode.Impulse);
+        StartCoroutine(DisableIsTrigger(droppedApple));
+    }
+
+    private IEnumerator DisableIsTrigger(GameObject droppedApple)
+    {
+        yield return new WaitForSeconds(0.5f);
+        droppedApple.GetComponent<Collider>().isTrigger = false;
     }
 
     public void Shake()
     {
-        for (int i = 0; i < Mathf.Max(_apples.Count, maxAppleLost); i++)
+        Vector3 dropDirection = Vector3.zero;
+        for (int i = 0; i < Mathf.Min(_apples.Count, maxAppleLost); i++)
         {
-            DropApple();
+            
+            dropDirection = new Vector3(Random.Range(-1f, 1f), 1f, Random.Range(-1f, 1f));
+            DropApple(dropDirection);
         }
     }
 

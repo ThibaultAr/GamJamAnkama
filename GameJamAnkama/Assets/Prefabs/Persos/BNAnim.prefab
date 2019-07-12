@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812430343262488452}
   - component: {fileID: 812430343262488455}
+  - component: {fileID: 5520944296085756068}
   m_Layer: 0
   m_Name: BNAnim
   m_TagString: Untagged
@@ -105,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 812430343262488454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.0948097, y: 3.1597977, z: 1.53}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
   m_Children:
   - {fileID: 812430342969943734}
   - {fileID: 8223669707408671698}
@@ -131,6 +132,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5520944296085756068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812430343262488454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc9d05644802d14e885a052e777e815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _offset: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &812430343339523578
 PrefabInstance:
   m_ObjectHideFlags: 0

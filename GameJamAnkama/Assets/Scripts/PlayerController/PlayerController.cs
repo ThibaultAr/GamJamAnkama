@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject basketPrefab;
+    public GameObject spriteGO;
 
     [SerializeField] private float _speed                   = 1.0f;
     [Header("Dash")]
@@ -40,8 +40,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _basket = Instantiate(basketPrefab, gameObject.transform).GetComponent<BasketStack>();
-        _basket.gameObject.transform.Translate(new Vector3(0, 3f, 0));
+        _basket = spriteGO.GetComponentInChildren<BasketStack>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
     }
@@ -130,7 +129,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<StockSave>() != null)
             _basket.OnStockCollision(collision.gameObject.GetComponent<StockSave>());
-        if (collision.gameObject.name.Contains("apple"))
+        if (collision.gameObject.name.Contains("apple") && !_basket.isFull)
             _basket.OnAppleCollision(collision.gameObject);
         if (collision.gameObject.name.Contains("Tree") && _dashing)
             collision.gameObject.GetComponent<TreeApplesGrow>().DropApples();
@@ -154,6 +153,7 @@ public class PlayerController : MonoBehaviour
     private void BumpOtherPlayer(GameObject otherPlayer, Vector3 contactPoint)
     {
         otherPlayer.GetComponent<PlayerController>().BumpByPlayer(contactPoint);
+        otherPlayer.GetComponent<PlayerController>().spriteGO.GetComponentInChildren<BasketStack>().Shake();
     }
 
     private void Bump(Vector3 contactPoint ,bool stun)
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
             if (currentTime < duration)
             {
                 float fracComplete = (Time.time - startTime) / duration;
-                _rigidbody.position = Vector3.Slerp(transform.position, desiredPosition, fracComplete);
+                _rigidbody.position = Vector3.Lerp(transform.position, desiredPosition, fracComplete);
             }
 
             currentTime += Time.deltaTime;
@@ -206,7 +206,7 @@ public class PlayerController : MonoBehaviour
             if (currentTime < duration)
             {
                 float fracComplete = (Time.time - startTime) / duration;
-                _rigidbody.position = Vector3.Slerp(transform.position, desiredPosition, fracComplete);
+                _rigidbody.position = Vector3.Lerp(transform.position, desiredPosition, fracComplete);
             }
                 
             currentTime += Time.deltaTime;

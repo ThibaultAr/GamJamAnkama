@@ -8,9 +8,12 @@ public class CharacterSprite : MonoBehaviour
     [SerializeField] private Vector3 _offset = new Vector3(0f, 4.5f, 0f);
 
     private Transform _worldCenter;
+    private GameObject _spriteGO;
 
     private void Start()
     {
+        _target.GetComponent<PlayerController>().spriteGO = this.gameObject;
+        _spriteGO = GetComponentInChildren<SpriteRenderer>().gameObject;
         _worldCenter = GameObject.FindGameObjectWithTag("WorldCenter").transform;
     }
 
@@ -18,6 +21,6 @@ public class CharacterSprite : MonoBehaviour
     void Update()
     {
         this.transform.position = _target.position + _offset;
-        this.transform.rotation = _worldCenter.rotation;
+        _spriteGO.transform.rotation = _worldCenter.rotation;
     }
 }

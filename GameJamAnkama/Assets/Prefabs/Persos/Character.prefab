@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5821676709486531857}
   - component: {fileID: 6720151441223632706}
   m_Layer: 0
-  m_Name: Ryuk
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,11 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2c62b885b9071438d1df9e3680b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basketPrefab: {fileID: 8104224676968943203, guid: 5b8cfb391c8af0942ba0fad65746bd4e,
-    type: 3}
-  _speed: 30
+  spriteGO: {fileID: 0}
+  _speed: 10
   _dashDuration: 0.1
-  _dashSpeed: 100
+  _dashSpeed: 33
   _dashCost: 15
   _dashJaugeMax: 30
   _dashRecoveryAmount: 50
