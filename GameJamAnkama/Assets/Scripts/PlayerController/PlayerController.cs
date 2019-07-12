@@ -5,14 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed                   = 1.0f;
+    [Header("Dash")]
     [SerializeField] private float _dashDuration            = 0.2f;
     [SerializeField] private float _dashSpeed               = 3.0f;
     [SerializeField] private float _dashCost                = 15.0f;
     [SerializeField] private float _dashJaugeMax            = 30f;
     [SerializeField] private float _dashRecoveryAmount      = 1.0f;
+    [Header("Speed Boost")]
     [SerializeField] private float _speedBoostFactor        = 2.0f;
     [SerializeField] private float _speedBoostDuration      = 2.0f;
     [SerializeField] private float _speedAppleCost          = 1.0f;
+    [Header("Bump by an Obstacle")]
+    [SerializeField] private float _stunDuration            = 0.5f;
+    [SerializeField] private float _bumpForce               = 5.0f;
+    [Header("Bump by a player")]
+    [SerializeField] private float _stunOnTargetDuration    = 1.0f;
+    [SerializeField] private float _bumpOnTargetForce       = 10.0f;
+    [SerializeField] private float _bumpCasterForce         = 3.0f;
 
     private Rigidbody   _rigidbody;
     private Animator    _animator;
@@ -116,33 +125,79 @@ public class PlayerController : MonoBehaviour
     {
         if(_dashing && collision.gameObject.tag == "Obstacle")
         {
-            Bump(collision.contacts[0].point);
+            Bump(collision.contacts[0].point, true);
+        }
+        else if(_dashing && collision.gameObject.tag == "Player")
+        {
+            BumpOtherPlayer(collision.gameObject, collision.contacts[0].point);
+            Bump(collision.contacts[0].point, false);
         }
     }
 
-    private void Bump(Vector3 contactPoint)
+    private void BumpOtherPlayer(GameObject otherPlayer, Vector3 contactPoint)
+    {
+        otherPlayer.GetComponent<PlayerController>().BumpByPlayer(contactPoint);
+    }
+
+    private void Bump(Vector3 contactPoint ,bool stun)
     {
         _bumped = true;
         _dashing = false;
         Vector3 direction = this.transform.position - new Vector3(contactPoint.x, this.transform.position.y, contactPoint.z);
-        Debug.DrawRay(contactPoint, direction* 10f, Color.red, 5f);
-        StartCoroutine(BumpCoroutine(direction));
+        StartCoroutine(BumpCoroutine(direction, stun));
     }
 
-    private IEnumerator BumpCoroutine(Vector3 direction)
+    private IEnumerator BumpCoroutine(Vector3 direction, bool _stun)
     {
+        float startTime = Time.time;
         float currentTime = 0f;
-        float duration = _dashSpeed;
-        while (currentTime < 1f)
+        float duration = 0.5f;
+        Vector3 startPosition = transform.position;
+        Vector3 desiredPosition = startPosition + Vector3.Normalize(direction) * (_stun ? _bumpForce : _bumpCasterForce);
+        while (currentTime < (_stun ? _stunDuration : duration))
         {
-            if(currentTime < 0.2f)
-                _rigidbody.position += Vector3.Normalize(direction) * Time.deltaTime * _speed;
+            if (currentTime < duration)
+            {
+                float fracComplete = (Time.time - startTime) / duration;
+                _rigidbody.position = Vector3.Slerp(transform.position, desiredPosition, fracComplete);
+            }
+
             currentTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
 
         _bumped = false;
-
-        
     }
+
+    public void BumpByPlayer(Vector3 contactPoint)
+    {
+        _bumped = true;
+        _dashing = false;
+        Vector3 direction = this.transform.position - new Vector3(contactPoint.x, this.transform.position.y, contactPoint.z);
+        StartCoroutine(BumpByPlayerCoroutine(direction));
+    }
+
+    private IEnumerator BumpByPlayerCoroutine(Vector3 direction)
+    {
+        float startTime = Time.time;
+        float currentTime = 0f;
+        float duration = 0.5f;
+        Vector3 startPosition = transform.position;
+        Vector3 desiredPosition = startPosition + Vector3.Normalize(direction) * _bumpOnTargetForce;
+        while (currentTime < _stunOnTargetDuration)
+        {
+            if (currentTime < duration)
+            {
+                float fracComplete = (Time.time - startTime) / duration;
+                _rigidbody.position = Vector3.Slerp(transform.position, desiredPosition, fracComplete);
+            }
+                
+            currentTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        _bumped = false;
+    }
+
+
 }
