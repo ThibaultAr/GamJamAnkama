@@ -87,19 +87,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2585225594054812656}
-    m_Position: {x: 310, y: 120, z: 0}
+    m_Position: {x: 430, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8453699305362028746}
-    m_Position: {x: 190, y: -250, z: 0}
+    m_Position: {x: 150, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2910799818006373050}
-    m_Position: {x: 400, y: -90, z: 0}
+    m_Position: {x: -70, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1028782092815614225}
-    m_Position: {x: -40, y: -220, z: 0}
+    m_Position: {x: 390, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5838046386408737936}
-    m_Position: {x: 10, y: -30, z: 0}
+    m_Position: {x: 150, y: -240, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -3685596601017199125}
@@ -233,7 +233,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Dos
+  - m_Name: Back
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -304,7 +304,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dos
+    m_ConditionEvent: Back
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5838046386408737936}
