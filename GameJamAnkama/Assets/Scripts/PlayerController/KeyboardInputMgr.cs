@@ -19,9 +19,9 @@ public class KeyboardInputMgr : InputManager
         float angle = Vector3.SignedAngle(Vector3.forward, direction, this.transform.up);
         _playerController.Move(angle, !direction.Equals(Vector3.zero));
 
-        if (state.Buttons.A == ButtonState.Pressed)
+        if (prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed)
             _playerController.Eat();
-        if (state.Buttons.RightShoulder == ButtonState.Pressed)
+        if (prevState.Buttons.RightShoulder == ButtonState.Released && state.Buttons.RightShoulder == ButtonState.Pressed)
             _playerController.Dash();
     }
 }

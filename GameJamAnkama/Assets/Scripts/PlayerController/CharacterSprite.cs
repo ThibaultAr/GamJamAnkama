@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterSprite : MonoBehaviour
 {
     [SerializeField] private Transform _target;
-    [SerializeField] private Vector3 _offset;
+    [SerializeField] private Vector3 _offset = new Vector3(0f, 4.5f, 0f);
 
     private Transform _worldCenter;
 
