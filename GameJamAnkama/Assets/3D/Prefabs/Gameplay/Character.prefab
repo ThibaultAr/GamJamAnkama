@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3207613213863290427
+--- !u!1 &2383500131329747091
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3207613213863290429}
-  - component: {fileID: 3207613213863290431}
-  - component: {fileID: 3207613213863290430}
-  - component: {fileID: 4255893546329181225}
-  - component: {fileID: 8888284879676629735}
-  - component: {fileID: 7593689528168638639}
+  - component: {fileID: 41576465531886455}
+  - component: {fileID: 397274060430574516}
+  - component: {fileID: 3410094924998254906}
+  - component: {fileID: 5821676709486531857}
+  - component: {fileID: 6720151441223632706}
   m_Layer: 0
   m_Name: Ryuk
   m_TagString: Untagged
@@ -21,32 +20,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3207613213863290429
+--- !u!4 &41576465531886455
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 2383500131329747091}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3207613213863290431
+--- !u!114 &397274060430574516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
+  m_GameObject: {fileID: 2383500131329747091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2c62b885b9071438d1df9e3680b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 8104224676968943203, guid: 5b8cfb391c8af0942ba0fad65746bd4e,
+    type: 3}
   _speed: 30
   _dashDuration: 0.1
   _dashSpeed: 100
@@ -56,26 +57,31 @@ MonoBehaviour:
   _speedBoostFactor: 2
   _speedBoostDuration: 2
   _speedAppleCost: 1
---- !u!114 &3207613213863290430
+  _stunDuration: 0.5
+  _bumpForce: 5
+  _stunOnTargetDuration: 1
+  _bumpOnTargetForce: 10
+  _bumpCasterForce: 3
+--- !u!114 &3410094924998254906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
+  m_GameObject: {fileID: 2383500131329747091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68c2558368476504a92e76db84896fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
---- !u!136 &4255893546329181225
+--- !u!136 &5821676709486531857
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
+  m_GameObject: {fileID: 2383500131329747091}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -83,13 +89,13 @@ CapsuleCollider:
   m_Height: 6
   m_Direction: 1
   m_Center: {x: 0, y: 3, z: 0}
---- !u!54 &8888284879676629735
+--- !u!54 &6720151441223632706
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
+  m_GameObject: {fileID: 2383500131329747091}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 10
@@ -99,17 +105,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &7593689528168638639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207613213863290427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80996bbb5d6a6147a789a8638e114e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basketPrefab: {fileID: 8104224676968943203, guid: 5b8cfb391c8af0942ba0fad65746bd4e,
-    type: 3}
