@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _basket = Instantiate(basketPrefab, gameObject.transform).GetComponent<BasketStack>();
-        _basket.gameObject.transform.Translate(new Vector3(0, 9f, 0));
+        _basket.gameObject.transform.Translate(new Vector3(0, 3f, 0));
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
     }
