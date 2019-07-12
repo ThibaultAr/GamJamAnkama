@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3207613213863290430}
   - component: {fileID: 4255893546329181225}
   - component: {fileID: 8888284879676629735}
+  - component: {fileID: 7593689528168638639}
   m_Layer: 0
   m_Name: Ryuk
   m_TagString: Untagged
@@ -98,3 +99,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &7593689528168638639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207613213863290427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80996bbb5d6a6147a789a8638e114e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 8104224676968943203, guid: 5b8cfb391c8af0942ba0fad65746bd4e,
+    type: 3}

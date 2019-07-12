@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject basketPrefab;
+
     [SerializeField] private float _speed                   = 1.0f;
     [Header("Dash")]
     [SerializeField] private float _dashDuration            = 0.2f;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool        _isBoosted  = false;
     private bool        _dashing    = false;
     private bool        _bumped = false;
+    private BasketStack _basket;
 
     private Vector3     _wantedPosition;
 
@@ -37,6 +40,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _basket = Instantiate(basketPrefab, gameObject.transform).GetComponent<BasketStack>();
+        _basket.gameObject.transform.Translate(new Vector3(0, 9f, 0));
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
     }
@@ -123,7 +128,13 @@ public class PlayerController : MonoBehaviour
     ///
     private void OnCollisionEnter(Collision collision)
     {
-        if(_dashing && collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.GetComponent<StockSave>() != null)
+            _basket.OnStockCollision(collision.gameObject.GetComponent<StockSave>());
+        if (collision.gameObject.name.Contains("apple"))
+            _basket.OnAppleCollision(collision.gameObject);
+        if (collision.gameObject.name.Contains("Tree") && _dashing)
+            collision.gameObject.GetComponent<TreeApplesGrow>().DropApples();
+        if (_dashing && collision.gameObject.tag == "Obstacle")
         {
             Bump(collision.contacts[0].point, true);
         }
@@ -132,6 +143,12 @@ public class PlayerController : MonoBehaviour
             BumpOtherPlayer(collision.gameObject, collision.contacts[0].point);
             Bump(collision.contacts[0].point, false);
         }
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<StockSave>() != null)
+            _basket.OnStopStockCollision();
     }
 
     private void BumpOtherPlayer(GameObject otherPlayer, Vector3 contactPoint)

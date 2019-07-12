@@ -43,14 +43,20 @@ public class BasketStack : MonoBehaviour
 
     public void OnStockCollision(StockSave stock)
     {
-        StartCoroutine("SaveApples", stock);
-        _stockingApples = true;
+        if(_apples.Count > 0)
+        {
+            StartCoroutine("SaveApples", stock);
+            _stockingApples = true;
+        }
     }
 
     public void OnStopStockCollision()
     {
-        StopCoroutine("SaveApples");
-        _stockingApples = false;
+        if(_stockingApples)
+        {
+            StopCoroutine("SaveApples");
+            _stockingApples = false;
+        }
     }
 
     public void OnAppleCollision(GameObject apple)
@@ -71,9 +77,6 @@ public class BasketStack : MonoBehaviour
             StopCoroutine("SaveApples");
             _stockingApples = false;
         }
-        savedApple.transform.position = stock.transform.position;
-        savedApple.transform.parent = stock.transform;
-        savedApple.transform.Translate(new Vector3(0, 2.45f+stock.apples.Count*0.8f, 0));
         stock.AddApple(savedApple);
     }
 
