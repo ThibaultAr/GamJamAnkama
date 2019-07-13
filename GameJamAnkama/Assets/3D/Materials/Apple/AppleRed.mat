@@ -107,8 +107,8 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimOffset: 0
-    - _RimPower: 10
+    - _RimOffset: -0.31
+    - _RimPower: 2.02
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
@@ -122,7 +122,7 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.8867924, g: 0.23843002, b: 0.23843002, a: 1}
     - _Color: {r: 0.8867924, g: 0.23843002, b: 0.23843002, a: 1}
-    - _DiffuseColor: {r: 0.754717, g: 0.08899963, b: 0.08899963, a: 0}
+    - _DiffuseColor: {r: 0.7735849, g: 0.6765076, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0, g: 1, b: 0.8758622, a: 0}
+    - _RimColor: {r: 0.7924528, g: 0.55029756, b: 0.078497685, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

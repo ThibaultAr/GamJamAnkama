@@ -23,5 +23,9 @@ public class KeyboardInputMgr : InputManager
             _playerController.Eat();
         if (prevState.Buttons.RightShoulder == ButtonState.Released && state.Buttons.RightShoulder == ButtonState.Pressed)
             _playerController.Dash();
+        if (prevState.Buttons.X == ButtonState.Released && state.Buttons.X == ButtonState.Pressed)
+            _playerController.Aim();
+        if (prevState.Buttons.X == ButtonState.Pressed && state.Buttons.X == ButtonState.Released)
+            _playerController.Shoot();
     }
 }

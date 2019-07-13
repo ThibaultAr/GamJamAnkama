@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6720151441223632706}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   _dashSpeed: 33
   _dashCost: 15
   _dashJaugeMax: 30
-  _dashRecoveryAmount: 50
+  _dashRecoveryAmount: 6
   _speedBoostFactor: 2
   _speedBoostDuration: 2
   _speedAppleCost: 1
@@ -61,6 +61,11 @@ MonoBehaviour:
   _stunOnTargetDuration: 1
   _bumpOnTargetForce: 10
   _bumpCasterForce: 3
+  _bumpDuration: 0.5
+  basket: {fileID: 0}
+  sight: {fileID: 3283033467129620264, guid: e02c7687d34b2c1448880ac04b8d6edf, type: 3}
+  hitSprite: {fileID: 0}
+  currentAnimState: 4
 --- !u!114 &3410094924998254906
 MonoBehaviour:
   m_ObjectHideFlags: 0

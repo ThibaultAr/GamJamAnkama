@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _ASEOutlineWidth: 0.02
+    - _ASEOutlineWidth: 0.007
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -94,8 +94,8 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimOffset: 0.24
-    - _RimPower: 10
+    - _RimOffset: 0.35
+    - _RimPower: 0.26
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
@@ -109,9 +109,9 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5660378, g: 0.39273086, b: 0.14150944, a: 1}
     - _Color: {r: 0.5660378, g: 0.39273086, b: 0.14150944, a: 1}
-    - _DiffuseColor: {r: 0.6132076, g: 0.38851205, b: 0.2053667, a: 1}
+    - _DiffuseColor: {r: 0.5943396, g: 0.38690835, b: 0.21586862, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0, g: 1, b: 0.8758622, a: 0}
+    - _RimColor: {r: 0.3301887, g: 0.18099232, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
 --- !u!114 &3052172459860214258
 MonoBehaviour:

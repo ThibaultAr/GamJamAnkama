@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af9d513bf2314343acd4ec6b2682eb1, type: 3}
+  m_Name: SJ
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 3730392884813612343, guid: 7dc1358e3186c844c9204ede0d6f7945, type: 3}
+  hitSprite: {fileID: 21300000, guid: ac81245c08466c74a969077932ac4ed5, type: 3}
+  avatarSprite: {fileID: 21300000, guid: d055977ab093bf2458fec35961436124, type: 3}
+  characterName: Steve

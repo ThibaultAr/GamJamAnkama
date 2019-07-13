@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af9d513bf2314343acd4ec6b2682eb1, type: 3}
+  m_Name: Eve
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 6903229482005446828, guid: 1f2d6b4ba5e3a084daf7f9f192f93135, type: 3}
+  hitSprite: {fileID: 21300000, guid: 3d7be9ac1237c40409332a444ad38f08, type: 3}
+  avatarSprite: {fileID: 21300000, guid: 3a4a95958c63d7b44b5a09dc5eaab691, type: 3}
+  characterName: Eve

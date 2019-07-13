@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3730392884813612341}
   - component: {fileID: 3730392884813612342}
-  - component: {fileID: 5401555434590557615}
+  - component: {fileID: -2471911646055472159}
   m_Layer: 0
   m_Name: SJAnim
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5401555434590557615
+--- !u!114 &-2471911646055472159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc9d05644802d14e885a052e777e815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
+  target: {fileID: 0}
   _offset: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &3730392883113312075
 PrefabInstance:

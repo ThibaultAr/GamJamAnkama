@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class MeteoriteExplode : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Explode()
     {
@@ -25,7 +14,10 @@ public class MeteoriteExplode : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerController>() != null)
-            Debug.Log(other.name);
+        {
+            other.GetComponent<PlayerController>().Bump(transform.position, true);
+            other.GetComponent<PlayerController>().spriteGO.GetComponentInChildren<BasketStack>().Shake();
+        }
     }
 
     private void SelfDestroy()

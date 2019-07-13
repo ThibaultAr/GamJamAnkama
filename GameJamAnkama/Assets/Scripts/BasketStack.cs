@@ -9,12 +9,21 @@ public class BasketStack : MonoBehaviour
     public int maxAppleLost;
     public float stockDelay;
     public List<GameObject> _appleAnchors = new List<GameObject>();
+
+    [HideInInspector]
+    public int currentAppleCount;
     public int maxAppleCount = 8;
-    public bool isFull = false;
 
     private Stack<GameObject> _apples;
     
     private bool _stockingApples;
+
+    private Coroutine saveApplesCoroutine;
+
+    public int getAppleCount()
+    {
+        return _apples.Count;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,26 +32,24 @@ public class BasketStack : MonoBehaviour
         _stockingApples = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddApple(GameObject apple)
     {
         _apples.Push(apple);
-        if (_apples.Count >= maxAppleCount)
-            isFull = true;
+        SOUND.Grab();
         
         apple.transform.position = _appleAnchors[_apples.Count - 1].transform.position;
         apple.transform.parent = _appleAnchors[_apples.Count - 1].transform;
     }
 
+    public void ConsumeApple()
+    {
+        GameObject droppedApple = _apples.Pop();
+        Destroy(droppedApple);
+    }
+
     private void DropApple(Vector3 direction)
     {
         GameObject droppedApple = _apples.Pop();
-        isFull = false;
         droppedApple.GetComponent<Collider>().isTrigger = true;
         droppedApple.GetComponent<Rigidbody>().isKinematic = false;
         droppedApple.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePosition;
@@ -68,11 +75,11 @@ public class BasketStack : MonoBehaviour
         }
     }
 
-    public void OnStockCollision(StockSave stock)
+    public void OnStockCollision(StockSave stock, int playerIndex)
     {
         if(_apples.Count > 0)
         {
-            StartCoroutine("SaveApples", stock);
+            saveApplesCoroutine = StartCoroutine(SaveApples(stock, playerIndex));
             _stockingApples = true;
         }
     }
@@ -81,7 +88,8 @@ public class BasketStack : MonoBehaviour
     {
         if(_stockingApples)
         {
-            StopCoroutine("SaveApples");
+            if(saveApplesCoroutine != null)
+                StopCoroutine(saveApplesCoroutine);
             _stockingApples = false;
         }
     }
@@ -96,23 +104,46 @@ public class BasketStack : MonoBehaviour
         AddApple(apple);
     }
 
-    public void SaveApple(StockSave stock)
+    public void SaveApple(StockSave stock, int playerIndex)
     {
         GameObject savedApple = _apples.Pop();
         if (_apples.Count == 0)
         {
-            StopCoroutine("SaveApples");
+            if (saveApplesCoroutine != null)
+                StopCoroutine(saveApplesCoroutine);
             _stockingApples = false;
         }
-        stock.AddApple(savedApple);
+        stock.AddApple(savedApple, playerIndex);
     }
 
-    private IEnumerator SaveApples(StockSave stock)
+    private IEnumerator SaveApples(StockSave stock, int playerIndex)
     {
         while(true)
         {
-            SaveApple(stock);
+            SaveApple(stock, playerIndex);
             yield return new WaitForSeconds(stockDelay);
         }
+    }
+
+    public GameObject GetProjectile()
+    {
+        if (_apples.Count > 0)
+        {
+            GameObject apple = _apples.Pop();
+            apple.transform.parent = null;
+            return apple;
+        }
+        else
+            return null;
+    }
+
+    public bool IsEmpty()
+    {
+        return _apples.Count == 0;
+    }
+
+    public bool IsFull()
+    {
+        return _apples.Count >= maxAppleCount;
     }
 }

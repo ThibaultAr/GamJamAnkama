@@ -108,7 +108,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimOffset: 0
-    - _RimPower: 10
+    - _RimPower: 6.91
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
@@ -122,7 +122,7 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.15040112, g: 0.6981132, b: 0.1284265, a: 1}
     - _Color: {r: 0.15040112, g: 0.6981132, b: 0.1284265, a: 1}
-    - _DiffuseColor: {r: 0.15472588, g: 0.5754717, b: 0.19275437, a: 0}
+    - _DiffuseColor: {r: 0.59920704, g: 0.7372549, b: 0.2862745, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0, g: 1, b: 0.8758622, a: 0}
+    - _RimColor: {r: 0.8980392, g: 0.4540986, b: 0.16470589, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

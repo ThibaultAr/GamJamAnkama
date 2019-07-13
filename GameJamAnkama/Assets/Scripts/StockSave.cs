@@ -1,26 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StockSave : MonoBehaviour
 {
-    public int applesCount;
+    public Dictionary<int, int> playerScore = new Dictionary<int, int>();
 
-    // Start is called before the first frame update
-    void Start()
+    private TMP_Text text;
+
+    public void Start()
     {
-        applesCount = 0;
+        PlayerManager pm = FindObjectOfType<PlayerManager>();
+        for (int i = 1; i < pm.playerList.Count+1; i++)
+        {
+            playerScore[i] = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddApple(GameObject apple, int playerIndex)
     {
-        
-    }
+        SOUND.WinPoint();
+        playerScore[playerIndex] += 1;
 
-    public void AddApple(GameObject apple)
-    {
-        applesCount+=1;
+        GameObject.Find("P" + playerIndex).GetComponent<CharacterUI>().textScore.text = "x" + playerScore[playerIndex];
         Destroy(apple);
     }
 }

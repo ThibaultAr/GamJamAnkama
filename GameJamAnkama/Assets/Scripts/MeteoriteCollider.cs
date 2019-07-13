@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class MeteoriteCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision other)
     {
         Destroy(other.gameObject);
         GetComponentInParent<MeteoriteExplode>().Explode();
+        FindObjectOfType<FXManager>().instanciateMeteorite(other.contacts[0].point);
     }
 }

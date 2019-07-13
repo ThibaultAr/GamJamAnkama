@@ -109,7 +109,7 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5660378, g: 0.39273086, b: 0.14150944, a: 1}
     - _Color: {r: 0.5660378, g: 0.39273086, b: 0.14150944, a: 1}
-    - _DiffuseColor: {r: 0.5283019, g: 0.33299214, b: 0.17194732, a: 1}
+    - _DiffuseColor: {r: 0.254717, g: 0.1147626, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0, g: 1, b: 0.8758622, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

@@ -47,5 +47,9 @@ MonoBehaviour:
     type: 3}
   meteoriteImpact: {fileID: 7407206258802429134, guid: 46eaf9d52e568814894174e23f30cc3b,
     type: 3}
+  canvas: {fileID: 0}
+  timerText: {fileID: 0}
   delayMeteorite: 5
   varTimeMeteorite: 2
+  timer: 30
+  gameOver: 0
