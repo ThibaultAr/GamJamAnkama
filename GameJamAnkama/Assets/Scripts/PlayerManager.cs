@@ -18,6 +18,8 @@ public class PlayerManager : MonoBehaviour
     float deadZone = 0.8f;
 
     public int nbOfPlayers;
+
+    private bool _initialized = false;
     
 
     public List<CharacterSelection> charactersList;
@@ -32,16 +34,16 @@ public class PlayerManager : MonoBehaviour
     {
         if(scene.buildIndex == 0)
         {
+            _initialized = false;
             SceneManager.LoadScene(1);
             return;
         }
 
         if(scene.buildIndex == 1)
         {
-            selectedCharacters = new List<string>();
-            playerIsReady = new Dictionary<int, bool>();
-            playerList = new Dictionary<int, PlayerScriptableObject>();
+            Init();
         }
+            
 
         if(scene.buildIndex == 2)
         {
@@ -75,19 +77,14 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("PlayerManger");
         SOUND.StartMusic();
-        for (int i = 0; i < 4; ++i)
-        {
-            playerIsSet.Add(i, false);
-            playerIsReleaseStick.Add(i, true);
-            playerIsReady.Add(i, false);
-        }
+        Init();
     }
 
     // Update is called once per frame
     void Update()
     {
        
-        if (SceneManager.GetActiveScene().buildIndex != 1)
+        if (!_initialized || SceneManager.GetActiveScene().buildIndex != 1)
             return;
 
         for (int i = 0; i < 4; ++i)
@@ -163,6 +160,22 @@ public class PlayerManager : MonoBehaviour
 
         if (nbOfPlayerReady == nbOfPlayers && nbOfPlayers >= 2)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void Init()
+    {
+        playerIsSet.Clear();
+        playerIsReleaseStick.Clear();
+        playerIsReady.Clear();
+
+        for (int i = 0; i < 4; ++i)
+        {
+            playerIsSet.Add(i, false);
+            playerIsReleaseStick.Add(i, true);
+            playerIsReady.Add(i, false);
+        }
+
+        _initialized = true;
     }
 
 

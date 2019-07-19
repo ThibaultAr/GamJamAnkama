@@ -10,7 +10,7 @@ public class KeyboardInputMgr : InputManager
     GamePadState prevState;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         prevState = state;
         state = GamePad.GetState(playerIndex);
