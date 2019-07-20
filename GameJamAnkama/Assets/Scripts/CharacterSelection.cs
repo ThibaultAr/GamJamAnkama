@@ -26,7 +26,7 @@ public class CharacterSelection : MonoBehaviour
         index = id-1;
         playerObject.index = id;
         currentCharacter = characterList[index];
-        playerManager.charactersList[index] = this;
+        playerManager.initCharactersList(this, index);
         UpdateUI();
     }
 

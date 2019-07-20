@@ -17,7 +17,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\TeamAuTh\xE9.fspro"
   SourceProjectPathUnformatted: "C:\\Users\\lclavel\\Documents\\FMOD Studio\\TeamAuTh\xE9\\TeamAuTh\xE9.fspro"
-  SourceBankPathUnformatted: C:\Users\bvidot\Documents\GamJamAnkama\BuildFmod\Desktop
+  SourceBankPathUnformatted: D:\Documents\GamJamAnkama\BuildFmod\Desktop\Desktop
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -78,8 +78,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  - Desktop\Master
-  Banks:
-  - Master.strings
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

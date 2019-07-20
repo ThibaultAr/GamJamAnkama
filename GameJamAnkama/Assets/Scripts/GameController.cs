@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using XInputDotNetPure;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -84,6 +86,29 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < 4 - pm.playerList.Count; i++)
         {
             GameObject.Find("PV" + (4 - i).ToString()).gameObject.SetActive(false);
+        }
+    }
+
+    GamePadState state;
+    GamePadState prevState;
+
+    void Update()
+    {
+        if(!gameOver)
+            return;
+
+        for (int i = 0; i < 4; ++i)
+        {
+            PlayerIndex testPlayerIndex = (PlayerIndex)i;
+            GamePadState testState = GamePad.GetState(testPlayerIndex);
+
+            prevState = state;
+            state = GamePad.GetState((PlayerIndex)i);
+            // Detect if a button was pressed this frame
+            if (prevState.Buttons.Y == ButtonState.Released && state.Buttons.Y == ButtonState.Pressed)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
     }
 }

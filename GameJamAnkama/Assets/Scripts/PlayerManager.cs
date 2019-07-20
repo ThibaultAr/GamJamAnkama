@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    [Header("Debug")]
+    public bool debugMode = false;
+    public int playerDebugNumber = 2;
+    private int characterInitialized = 0;
+
     public GameObject characterPrefabs;
     public Dictionary<int, PlayerScriptableObject> playerList = new Dictionary<int, PlayerScriptableObject>();
     
@@ -35,12 +40,19 @@ public class PlayerManager : MonoBehaviour
         if(scene.buildIndex == 0)
         {
             _initialized = false;
+            for (int i = 0; i < 4; ++i)
+            {
+                playerIsSet.Add(i, false);
+                playerIsReleaseStick.Add(i, true);
+                playerIsReady.Add(i, false);
+            }
             SceneManager.LoadScene(1);
             return;
         }
 
         if(scene.buildIndex == 1)
         {
+            _initialized = false;
             Init();
         }
             
@@ -100,7 +112,6 @@ public class PlayerManager : MonoBehaviour
 
             prevState = state;
             state = GamePad.GetState((PlayerIndex)i);
-
             // Detect if a button was pressed this frame
             if (prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && !playerIsReady[i])
             {
@@ -158,19 +169,23 @@ public class PlayerManager : MonoBehaviour
                 nbOfPlayerReady++;
         }
 
-        if (nbOfPlayerReady == nbOfPlayers && nbOfPlayers >= 2)
+        if(debugMode && playerDebugNumber == nbOfPlayerReady)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else if (nbOfPlayerReady == nbOfPlayers && nbOfPlayers >= 2)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void Init()
     {
-        playerIsSet.Clear();
+        charactersList = new List<CharacterSelection>(){null, null, null, null};
+        characterInitialized = 0;
+        playerList.Clear();
         playerIsReleaseStick.Clear();
         playerIsReady.Clear();
+        selectedCharacters.Clear();
 
         for (int i = 0; i < 4; ++i)
         {
-            playerIsSet.Add(i, false);
             playerIsReleaseStick.Add(i, true);
             playerIsReady.Add(i, false);
         }
@@ -178,5 +193,24 @@ public class PlayerManager : MonoBehaviour
         _initialized = true;
     }
 
+    public void initCharactersList(CharacterSelection character, int index)
+    {
+        charactersList[index] = character;
+        characterInitialized++;
 
+        if(characterInitialized == 4)
+            DebugAutoSelect();
+    }
+
+    public void DebugAutoSelect()
+    {
+        if(debugMode && SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            for(int i = 0; i < playerDebugNumber; i++)
+            {
+                if(!playerIsReady[i])
+                    SelectCharacter(i, true);
+            }
+        }
+    }
 }

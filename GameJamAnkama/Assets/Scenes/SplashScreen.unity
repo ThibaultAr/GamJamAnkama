@@ -150,9 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf43adc5eac4dc2438647c1d0c8c1f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugMode: 1
+  playerDebugNumber: 3
   characterPrefabs: {fileID: 2383500131329747091, guid: 0e5fe5de89ce6ed43b347d7c0bc6e87d,
     type: 3}
-  playerList: []
+  selectedCharacters: []
   nbOfPlayers: 0
   charactersList:
   - {fileID: 0}
